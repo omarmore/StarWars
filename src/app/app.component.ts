@@ -14,20 +14,10 @@ export class AppComponent implements OnInit{
 
 
   constructor(
-    protected userService: PeopleService
+    //protected userService: PeopleService
   ) {
   }
 
   ngOnInit() {
-    this.userService.getPeople2()
-    .subscribe(
-      (data) => { // Success
-        this.users = data['results'];
-        console.log(this.users);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
   }
 }
