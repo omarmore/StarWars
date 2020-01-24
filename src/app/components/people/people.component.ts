@@ -10,9 +10,12 @@ export class PeopleComponent implements OnInit {
 
   
   constructor( 
-    private _peopleService:PeopleService
-   ) { }
-
+    public _peopleService:PeopleService
+   ) 
+   { 
+      //console.log(_peopleService.info.name )
+   }
+ 
   
   ///arreglo para probar el ng -for en angular
   Pokemon:any = [

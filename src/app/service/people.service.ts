@@ -9,12 +9,16 @@ import { Observable } from 'rxjs';
 })
 export class PeopleService implements OnInit {
 
+    info:any = [];
+    cargada:boolean = false;
 
 
   constructor(protected http:HttpClient) { 
     this.getJSON().subscribe(data=>{
-      console.log(data)
-    });
+      console.log(data);
+      this.cargada =  true;
+      this.info = data;
+    });   
   }
 
   public getJSON(): Observable<any> {
