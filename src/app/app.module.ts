@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { PeopleComponent } from './components/people/people.component';
 import { HttpClient } from 'selenium-webdriver/http';
+import { PeopleDetComponent } from './components/people-det/people-det.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClient } from 'selenium-webdriver/http';
     DirectivaComponent,
     HomeComponent,
     AboutComponent,
-    PeopleComponent
+    PeopleComponent,
+    PeopleDetComponent
   ],
   imports: [
     BrowserModule,

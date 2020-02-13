@@ -2,16 +2,21 @@
 <h1>Personajes <small>Star Wars</small></h1>
 <hr>
 <div class="card-columns" >
-  <div class="card" *ngFor="let people of _peopleService.info">
+  <div class="card animated fadeIn fast" *ngFor="let people of _peopleService.info ; let i = index">
     <img [src]="people.img" class="card-img-top" [alt]="people.name">
     <div class="card-body">
       <h5 class="card-title">{{people.name}}</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-muted">{{people.created}}</small></p>
-      <button class="btn btn-outline-primary btn-block">
-        Ver más...
+
+      <button (click)="verPeople(i)" type="button" class="btn btn-outline-primary btn-block"  >
+        ver mas ...
+
       </button>
-    </div>
+
+      <!--<a [routerLink]="['/people-def',i]" class ="btn btn-outline-primary">Ver más link...</a>
+      -->
+      </div>
   </div>
 
 </div>

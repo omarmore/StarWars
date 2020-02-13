@@ -1,0 +1,25 @@
+<h1>{{people.name}} (<small>{{people.created | date:'y'}}</small>) </h1>
+<hr>    
+<div class="row">
+    <div class="col-mod-4">
+        <img [src]="people.img" class="img-fliud" alt="">
+        <br><br>
+        <a [routerLink]="['/people']" class="btn btn-outline-danger btn-block">Regresar...</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{people.name}}</h3>
+        <hr>
+        
+        <p>Heigth : {{people.height}}</p><hr>
+        <p>Mass : {{people.mass}}</p>  <hr>
+        <p>Hair Color : {{people.hair_color}}</p> <hr>
+        <p>Skin Color : {{people.skin_color}}</p> <hr>
+        <p>Eye Color : {{people.eye_color}}</p><hr>
+        <p>Birth Year : {{people.birth_year}}</p><hr>
+        <p>Gender : {{people.gender}}</p><hr>
+        <p>Homewold : {{people.homeworld}}</p><hr>
+        
+
+    </div>
+
+</div>
