@@ -23,17 +23,7 @@ export class PeopleService implements OnInit {
     })
   }
 
-  /*constructor(protected http:HttpClient) { 
-    this.getJSON().subscribe(data=>{
-      console.log(data);
-      this.cargada =  true;
-      this.info = data;
-    });   
-  }
 
-  public getJSON(): Observable<any> {
-    return this.http.get("./assets/img/people.json");
-  }*/
 
   getPeople(){    
       return this.http.get('https://randomuser.me/api/?results=25');
@@ -45,9 +35,31 @@ export class PeopleService implements OnInit {
     console.log('Aqui estoy')
     //console.log(this.info[idx]);
   }
+
+
 /**Omar recordar que las funciones deben retornar el valos que espera en metodo cuando lo llaman
  * por que al ser llamanda el metodo, esté no devolvera un valor indefinido por que no reconoce nada de regreso
  */
+
+ buscarPeople(termino:string){
+   
+    let  personArr:string[] = [];
+    termino = termino.toLowerCase();
+    for(let i = 0; i < this.info.length; i++ ){
+
+      let person = this.info[i];
+      let name = person.name.toLowerCase();
+
+      if( name.indexOf(termino) >= 0 ){
+        person.idx = i;
+        console.log(person);
+        personArr.push(person);
+      }
+
+    }
+    return personArr;
+ }
+
   ngOnInit(){
 
   }

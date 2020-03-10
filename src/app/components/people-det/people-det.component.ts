@@ -19,11 +19,10 @@ export class PeopleDetComponent  {
     this.activateRouter.params.subscribe(
       params => {
         console.log(params['id']);
-        
-       this.people =  _peopleService.getPeoples(params['id']);
+        this.people =  _peopleService.getPeoples(params['id']);
         console.log(this.people);
     })
-  }
+  } 
 
 
 

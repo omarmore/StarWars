@@ -22,6 +22,8 @@ import { AboutComponent } from './components/about/about.component';
 import { PeopleComponent } from './components/people/people.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { PeopleDetComponent } from './components/people-det/people-det.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { PeopleTarjetaComponent } from './components/people-tarjeta/people-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PeopleDetComponent } from './components/people-det/people-det.component
     HomeComponent,
     AboutComponent,
     PeopleComponent,
-    PeopleDetComponent
+    PeopleDetComponent,
+    BuscadorComponent,
+    PeopleTarjetaComponent
   ],
   imports: [
     BrowserModule,
