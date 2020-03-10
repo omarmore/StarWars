@@ -1,7 +1,0 @@
-
-<h1>Personajes <small>Star Wars</small></h1>
-<hr>
-<div class="card-columns" >
-  <app-people-tarjeta (personSeleccionado)="verPeople($event)" [people] = "people" [indice]= "i" *ngFor="let people of _peopleService.info ; let i = index" ></app-people-tarjeta>
-</div>
-
